@@ -32,7 +32,7 @@ export function eqArray(
  * @param eq オブジェクトの生の値が同値かを比較する関数
  * @returns
  */
-export function eqRecord<T>(
+export function eqRecord<T extends { [key: string]: any }>(
     a: T,
     b: T,
     eq: (a: unknown, b: unknown) => boolean = (a, b) => a === b
