@@ -12,7 +12,7 @@ export interface Counter {
 
 export class CharacterCounter implements Counter, vscode.Disposable {
     count(text: string): number {
-        text = toPlain(text).replace(/\s+/, "")
+        text = toPlain(text).replace(/\s+/g, "")
         return [...text].length
     }
 
